@@ -1,0 +1,12 @@
+# Calculate selling price of a book
+
+cost_price = float(input("Enter Cost Price of the book: "))
+discount = float(input("Enter Discount percentage: "))
+
+# Calculate discount amount
+discount_amount = (discount / 100) * cost_price
+
+# Calculate selling price
+selling_price = cost_price - discount_amount
+
+print("Selling Price of the book:", selling_price)
