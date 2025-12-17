@@ -1,0 +1,12 @@
+#WAP to print Fibonacci series upto n.
+
+n = int(input("Enter how many terms you want: "))
+
+a, b = 0, 1
+
+print("Fibonacci Series:")
+
+for i in range(n):
+    print(a, end=" ")
+    a, b = b, a + b
+
