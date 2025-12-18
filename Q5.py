@@ -1,12 +1,18 @@
-#WAP to print Fibonacci series upto n.
+##Write a program to check whether the triangle is equilateral, isosceles or scalene triangle.
 
-n = int(input("Enter how many terms you want: "))
+a = float(input("Enter first side: "))
+b = float(input("Enter second side: "))
+c = float(input("Enter third side: "))
 
-a, b = 0, 1
+# First check if sides can form a valid triangle
+if (a + b > c) and (a + c > b) and (b + c > a):
 
-print("Fibonacci Series:")
+    if a == b == c:
+        print("The triangle is Equilateral.")
+    elif a == b or b == c or a == c:
+        print("The triangle is Isosceles.")
+    else:
+        print("The triangle is Scalene.")
 
-for i in range(n):
-    print(a, end=" ")
-    a, b = b, a + b
-
+else:
+    print("The given sides do not form a valid triangle.")

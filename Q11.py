@@ -1,24 +1,21 @@
-# Program to check Strong Number
+# Program to calculate total ticket amount for 5 people
 
-n = int(input("Enter a number: "))
-original = n
-sum_fact = 0
+total_amount = 0
 
-# Function to calculate factorial of a digit
-def factorial(num):
-    fact = 1
-    for i in range(1, num + 1):
-        fact *= i
-    return fact
+ticket_price = float(input("Enter ticket price per person: "))
 
-# Calculate sum of factorials of digits
-while n > 0:
-    digit = n % 10
-    sum_fact += factorial(digit)
-    n //= 10
+for i in range(1, 6):
+    age = int(input(f"Enter age of person {i}: "))
 
-# Check if Strong Number
-if sum_fact == original:
-    print(original, "is a Strong Number")
-else:
-    print(original, "is NOT a Strong Number")
+    if age < 12:
+        discount = 0.30 * ticket_price     # 30% discount
+        final_amount = ticket_price - discount
+    elif age > 59:
+        discount = 0.50 * ticket_price     # 50% discount
+        final_amount = ticket_price - discount
+    else:
+        final_amount = ticket_price        # No discount
+
+    total_amount += final_amount
+
+print("\nTotal ticket amount for all 5 people =", total_amount)

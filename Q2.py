@@ -1,9 +1,13 @@
+##Write a program to input any alphabet and check whether it is vowel or consonant.
 
-#WAP to print all odd numbers until n.
+ch = input("Enter any alphabet: ")
 
-n = int(input("Enter the value of n: "))
+# Convert to lowercase to handle both upper and lowercase
 
-print("Odd numbers up to", n, "are:")
-
-for i in range(1, n + 1, 2):
-    print(i)
+if ch.isalpha() and len(ch) == 1:
+    if ch in ['a', 'e', 'i', 'o', 'u']:
+        print("It is a vowel.")
+    else:
+        print("It is a consonant.")
+else:
+    print("Invalid input! Please enter a single alphabet.")

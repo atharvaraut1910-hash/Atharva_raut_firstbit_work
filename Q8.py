@@ -1,10 +1,26 @@
-#WAP to find which numbers are divisible by 7 and multiple of 5 in a given range.
+import random
 
-start = int(input("Enter start of range: "))
-end = int(input("Enter end of range: "))
+# Correct credentials
+correct_userid = "admin"
+correct_password = "12345"
 
-print("Numbers divisible by 7 and multiples of 5:")
+# Step 1: Get input
+userid = input("Enter UserID: ")
+password = input("Enter Password: ")
 
-for i in range(start, end + 1):
-    if i % 7 == 0 and i % 5 == 0:
-        print(i, end=" ")
+# Step 2: Verify credentials
+if userid == correct_userid and password == correct_password:
+    # Step 3: Generate 4-digit random number
+    captcha = random.randint(1000, 9999)
+    print("Captcha:", captcha)
+
+    # Step 4: Ask user to re-enter captcha
+    user_captcha = int(input("Enter the above number: "))
+
+    # Step 5: Check captcha
+    if user_captcha == captcha:
+        print("Login Successful! ✔")
+    else:
+        print("Captcha Failed! ❌")
+else:
+    print("Invalid UserID or Password! ❌")

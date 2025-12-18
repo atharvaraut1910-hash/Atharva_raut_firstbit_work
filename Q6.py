@@ -1,18 +1,13 @@
-#WAP to check if a given number is prime number or not.
+# Program to calculate Profit or Loss
 
-n = int(input("Enter a number: "))
+cost_price = float(input("Enter Cost Price (CP): "))
+selling_price = float(input("Enter Selling Price (SP): "))
 
-if n <= 1:
-    print("Not a prime number")
+if selling_price > cost_price:
+    profit = selling_price - cost_price
+    print("Profit =", profit)
+elif cost_price > selling_price:
+    loss = cost_price - selling_price
+    print("Loss =", loss)
 else:
-    is_prime = True
-
-    for i in range(2, int(n**0.5) + 1):
-        if n % i == 0:
-            is_prime = False
-            break
-
-    if is_prime:
-        print(n, "is a Prime Number")
-    else:
-        print(n, "is NOT a Prime Number")
+    print("No Profit No Loss")

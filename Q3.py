@@ -1,10 +1,11 @@
-#WAP to print sum of series upto n.
+##Write a program to input angles of a triangle and check whether triangle is valid or not.
 
-n = int(input("Enter the value of n: "))
+a = float(input("Enter first angle: "))
+b = float(input("Enter second angle: "))
+c = float(input("Enter third angle: "))
 
-sum_series = 0
-
-for i in range(1, n + 1):
-    sum_series += i
-
-print("Sum of series up to", n, "=", sum_series)
+# A triangle is valid if the sum of all angles is 180
+if a > 0 and b > 0 and c > 0 and (a + b + c == 180):
+    print("The triangle is valid.")
+else:
+    print("The triangle is not valid.")

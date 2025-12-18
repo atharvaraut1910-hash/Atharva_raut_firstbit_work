@@ -1,11 +1,28 @@
-#WAP to print all numbers in a range divisible by a given number.
+# Program to calculate grade from 5 subject marks
 
-start = int(input("Enter start of range: "))
-end = int(input("Enter end of range: "))
-num = int(input("Enter the number to check divisibility: "))
+# Input marks
+m1 = float(input("Enter marks of Subject 1: "))
+m2 = float(input("Enter marks of Subject 2: "))
+m3 = float(input("Enter marks of Subject 3: "))
+m4 = float(input("Enter marks of Subject 4: "))
+m5 = float(input("Enter marks of Subject 5: "))
 
-print("Numbers divisible by", num, "are:")
+# Calculate total and percentage
+total = m1 + m2 + m3 + m4 + m5
+percentage = (total / 500) * 100
 
-for i in range(start, end + 1):
-    if i % num == 0:
-        print(i, end=" ")
+# Display result
+print("Total Marks =", total)
+print("Percentage =", percentage)
+
+# Decide grade
+if percentage >= 75:
+    print("Grade: Distinction")
+elif percentage >= 60:
+    print("Grade: First Class")
+elif percentage >= 50:
+    print("Grade: Second Class")
+elif percentage >= 40:
+    print("Grade: Pass Class")
+else:
+    print("Grade: Fail")

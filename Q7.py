@@ -1,9 +1,12 @@
-#WAP to print all integers upto n that aren’t divisible by 2 and 3.
+# Program to check correct UserID and Password
 
-n = int(input("Enter the value of n: "))
+correct_userid = "admin"
+correct_password = "12345"
 
-print("Numbers not divisible by 2 and 3:")
+userid = input("Enter UserID: ")
+password = input("Enter Password: ")
 
-for i in range(1, n + 1):
-    if i % 2 != 0 and i % 3 != 0:
-        print(i, end=" ")
+if userid == correct_userid and password == correct_password:
+    print("Login Successful!")
+else:
+    print("Invalid UserID or Password!")

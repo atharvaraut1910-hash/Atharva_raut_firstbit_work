@@ -1,10 +1,21 @@
-#WAP to check if given number is Perfect Number.
+#Write a program to check if person is eligible to marry or not (male age >=21 and female age>=18)
 
-n = int(input("Enter a number: "))
+# Program to check marriage eligibility
 
-sum_div = 0
+gender = input("Enter gender (male/female): ").lower()
+age = int(input("Enter age: "))
 
-# Find proper divisors
-for i in range(1, n):
-    if i % 2 == 0 and i % 7:
-        print(i, end=" ")
+if gender == "male":
+    if age >= 21:
+        print("Eligible for marriage ✔")
+    else:
+        print("Not eligible for marriage ❌")
+
+elif gender == "female":
+    if age >= 18:
+        print("Eligible for marriage ✔")
+    else:
+        print("Not eligible for marriage ❌")
+
+else:
+    print("Invalid gender entered!")
