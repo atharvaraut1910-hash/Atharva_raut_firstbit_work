@@ -1,0 +1,10 @@
+#WAP to print sum of series upto n.
+
+n = int(input("Enter the value of n: "))
+
+sum_series = 0
+
+for i in range(1, n + 1):
+    sum_series += i
+
+print("Sum of series up to", n, "=", sum_series)
